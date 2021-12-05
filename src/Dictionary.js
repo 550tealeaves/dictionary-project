@@ -1,16 +1,24 @@
 import React, { useState } from "react";
+import axios from "axios"; //4. Import axios line 
 import "./Dictionary.css";
 
 export default function Dictionary(){
-    let [keyword, setKeyword] = useState(""); //7. create state b/c the value of search entry will change in component
+    let [keyword, setKeyword] = useState(""); //create state b/c the value of search entry will change in component
     
-    function search(event){//6. this function called when we submit the form
+    function handleResponse(response){ //8. Define handleResponse function
+        console.log(response.data); //9. Definitions/phonetics always stored within data
+    }
+    
+    function search(event){
         event.preventDefault();
-        alert(`searching for definition of ${keyword}`); //interpolate the state - so that the word changes with each new entry
+        
+
+        let apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en/${keyword}`; //10. After creating API url, interpolate and add ${keyword} state so any word can be defined
+        axios.get(apiUrl).then(handleResponse); //7. Use axios.get to make request
     }
 
-    function handleKeywordChange(event){//9. this function called when we enter something in search bar  
-        setKeyword(event.target.value) //10. will display the input entered into searchbar 
+    function handleKeywordChange(event){  
+        setKeyword(event.target.value) 
     }
     
     return (
