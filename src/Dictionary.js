@@ -1,12 +1,15 @@
 import React, { useState } from "react";
-import axios from "axios"; //4. Import axios line 
+import axios from "axios"; 
+import Results from "./Results";
 import "./Dictionary.css";
 
 export default function Dictionary(){
     let [keyword, setKeyword] = useState(""); //create state b/c the value of search entry will change in component
+    let [results, setResults] = useState(null);
     
-    function handleResponse(response){ //8. Define handleResponse function
-        console.log(response.data); //9. Definitions/phonetics always stored within data
+    function handleResponse(response){ //Define handleResponse function
+        console.log(response.data[0].meanings[0].definitions[0].definition); //pathway to 1st definition
+        setResults(response.data[0]);
     }
     
     function search(event){
@@ -26,6 +29,7 @@ export default function Dictionary(){
             <form onSubmit={search}>
                 <input type="search" autoFocus={true} onChange={handleKeywordChange} />
             </form>
+            <Results results={results} />
         </div>
     ); 
 }
