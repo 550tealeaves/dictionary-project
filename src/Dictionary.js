@@ -5,7 +5,7 @@ import "./Dictionary.css";
 
 export default function Dictionary(){
     let [keyword, setKeyword] = useState(""); //create state b/c the value of search entry will change in component
-    let [results, setResults] = useState(null); //3. create state to track the changes of API results with each word entered - will update pg 
+    let [results, setResults] = useState(null); //3a. create state to track the changes of API results with each word entered - will update pg 
     
     function handleResponse(response){ //Define handleResponse function
         console.log(response.data[0].meanings[0].definitions[0].definition); //1. pathway to 1st definition

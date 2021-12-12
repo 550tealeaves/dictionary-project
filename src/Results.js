@@ -12,7 +12,7 @@ export default function Results(props) { //Send results as props
                     <div key={index}>
                         <Meaning meaning={meaning} />
                     </div>
-                )
+                );
             })}
         </div>  
     );    
