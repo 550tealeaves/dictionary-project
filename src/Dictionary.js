@@ -8,7 +8,7 @@ export default function Dictionary(){
     let [results, setResults] = useState(null); //3a. create state to track the changes of API results with each word entered - will update pg 
     
     function handleResponse(response){ //Define handleResponse function
-        console.log(response.data[0].meanings[0].definitions[0].definition); //1. pathway to 1st definition
+        console.log(response.data[0]);
         setResults(response.data[0]);//3b. - every time you get response from dictionary API, update the results and store it 
     }
     
