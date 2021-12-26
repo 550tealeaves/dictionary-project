@@ -1,12 +1,14 @@
 import React, { useState } from "react";
 import axios from "axios"; 
 import Results from "./Results";
+import Photos from "./Photos";
 import "./Dictionary.css";
 
 export default function Dictionary(props){
     let [keyword, setKeyword] = useState(props.defaultKeyword); //create state b/c the value of search entry will change in component
     let [results, setResults] = useState(null); //3a. create state to track the changes of API results with each word entered - will update pg 
     let [loaded, setLoaded] = useState(false); // tracks whether or not the page was loaded 
+    let [photos, setPhotos] = useState(null); //7. tracks the current photo whenever a word is searched for
     
     function handleDictionaryResponse(response){ //Define handleResponse function
         console.log(response.data[0]);
@@ -20,11 +22,13 @@ export default function Dictionary(props){
 
     function handlePexelsResponse(response){
         console.log(response);
+        setPhotos(response.data.photos); //7a. this is where the photos stored in API results
     }
     
     let pexelsApiKey ="563492ad6f91700001000001f6c8ac98c12c4921a81f1c9995975b2b";
     let pexelsApiUrl = `https://api.pexels.com/v1/search?query=${keyword}&per_page=1`;
-    axios.get(pexelsApiUrl).then(handlePexelsResponse);
+    let headers = { "Authorization": `Bearer ${pexelsApiKey}` }; //5. store authorization header in variable - header
+    axios.get(pexelsApiUrl, { headers: headers }).then(handlePexelsResponse); //lets you authenticate yourself so you get access to API results - replace authorization statement with variable "headers"
 
     
     function handleSubmit(event){
@@ -57,6 +61,7 @@ export default function Dictionary(props){
                 </div>
             </section>
             <Results results={results} />
+            <Photos photos={photos} />
         </div>
     );   
     } else {
