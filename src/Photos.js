@@ -7,15 +7,15 @@ export default function Photos(props){//8. Create photos component and sent phot
         return (
             <section className="Photos">
                 <div className="row">
-                {props.photos.map(function (photo, index) { //11. Loop through the array of photos and display them 1 by 1 - display in bootstrap grid and make clickable to original link 
-                    return (
-                        <div className="col-4" key={index}>
-                            <a href={photo.src.original} target="_blank" rel="noreferrer">
-                                <img src={photo.src.landscape}  alt={props.keyword} className="img-fluid" /> 
-                            </a>
-                        </div>
-                    );
-                })}
+                    {props.photos.map(function (photo, index) { //11. Loop through the array of photos and display them 1 by 1 - display in bootstrap grid and make clickable to original link 
+                        return (
+                            <div className="col-4" key={index}>
+                                <a href={photo.src.original} target="_blank" rel="noreferrer">
+                                    <img src={photo.src.landscape}  alt={props.keyword} className="img-fluid" /> 
+                                </a>
+                            </div>
+                        );
+                    })}
                 </div>
             </section>
         );  
