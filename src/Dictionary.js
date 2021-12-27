@@ -26,8 +26,8 @@ export default function Dictionary(props){
     }
     
     let pexelsApiKey ="563492ad6f91700001000001f6c8ac98c12c4921a81f1c9995975b2b";
-    let pexelsApiUrl = `https://api.pexels.com/v1/search?query=${keyword}&per_page=1`;
-    let headers = { "Authorization": `Bearer ${pexelsApiKey}` }; //5. store authorization header in variable - header
+    let pexelsApiUrl = `https://api.pexels.com/v1/search?query=${keyword}&per_page=9`;
+    let headers = { Authorization: `Bearer ${pexelsApiKey}` }; //5. store authorization header in variable - header
     axios.get(pexelsApiUrl, { headers: headers }).then(handlePexelsResponse); //lets you authenticate yourself so you get access to API results - replace authorization statement with variable "headers"
 
     
