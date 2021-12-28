@@ -5,7 +5,8 @@
 }
 
 body{
-background: rgb(250, 255, 253); 
+background-image: url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/023/672/original/detective.png?1640668021); 
+backdrop-filter: blur(5px);
 }
 
 a {
