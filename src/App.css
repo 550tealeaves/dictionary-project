@@ -5,8 +5,8 @@
 }
 
 body{
-background-image: url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/023/672/original/detective.png?1640668021); 
-backdrop-filter: blur(5px);
+background-image: url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/023/673/original/detective2.png?1640670644); 
+backdrop-filter: blur(3px);
 }
 
 a {
@@ -21,6 +21,7 @@ a {
   max-width: 200px;
   display: block;
   margin: 0 auto;
+  border-radius: 3px;
 }
 
 .App-footer{
