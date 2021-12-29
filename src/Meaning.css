@@ -7,6 +7,6 @@
 .Meaning .example{
     opacity: 0.8;
     font-style: italic;
-    color: slateblue;
+    color: rgb(92, 69, 238);
     margin-top: 5px;
 }

@@ -7,6 +7,7 @@
 body{
 background-image: url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/023/673/original/detective2.png?1640670644); 
 backdrop-filter: blur(3px);
+font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 a {
