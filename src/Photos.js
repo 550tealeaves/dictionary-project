@@ -15,7 +15,7 @@ export default function Photos(props){//8. Create photos component and sent phot
                                 </a>
                             </div>
                         );
-                    })}
+                     })}
                 </div>
             </section>
         );  
