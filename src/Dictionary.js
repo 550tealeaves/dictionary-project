@@ -5,7 +5,7 @@ import Photos from "./Photos";
 import "./Dictionary.css";
 
 export default function Dictionary(props){
-    let [keyword, setKeyword] = useState(props.defaultKeyword); //create state b/c the value of search entry will change in component
+    let [keyword, setKeyword] = useState(props.defaultKeyword); // create state b/c the value of search entry will change in component
     let [results, setResults] = useState(null); // create state to track the changes of API results with each word entered - will update pg 
     let [loaded, setLoaded] = useState(false); // tracks whether or not the page was loaded 
     let [photos, setPhotos] = useState(null); //7. tracks the current photo whenever a word is searched for
