@@ -1,3 +1,13 @@
+# Dictionary app
+> Created functional dictionary app using React library 
+> Dictionary app provides definition, synonyms, sentence examples, and images of any word in the search bar 
+
+
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
