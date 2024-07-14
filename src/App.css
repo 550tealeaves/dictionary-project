@@ -10,7 +10,7 @@ backdrop-filter: blur(3px);
 font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-a {
+a{
   color: black;
 }
 
@@ -18,14 +18,16 @@ a {
   margin: 30px 0;
 }
 
-.App-logo{
-  max-width: 200px;
-  display: block;
-  margin: 0 auto;
-  border-radius: 3px;
-}
-
 .App-footer{
   text-align: center;
   margin: 30px 0;
+  color: black;
+}
+
+.App-footer a{
+  color: magenta;
+}
+
+.App-footer a:hover{
+  color: mediumspringgreen;
 }
